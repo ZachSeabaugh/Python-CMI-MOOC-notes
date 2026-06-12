@@ -1,0 +1,265 @@
+LEC:5- (introducing basic data types)
+
+  int - integers only
+  float - fractional numbers with decimals
+  
+  what differentiates them - integers can be stored in computer memory  as 0’s and 1’s - but fractional numbers are first separated in ‘mantissa’ and ‘exponent’
+  
+  type(e) - this returns the type(int/float) of expression ‘e’
+  
+  Boolean (bool) - represents ’true’ and ‘false’ decisions.
+  it is determined through comparisons or through logical operators like ‘not, and , or’ - type of operation
+  eg- 
+  - not true is false, not false is true.
+  - x and y are true - if both x, y is true
+  - x or y is true - if at least one of x , y is true
+  
+  using boolean value -
+  
+  def divides(m,n):
+  	if n%m ==0
+  		return(True)
+  	else:
+  		return(False)
+  
+  def even(n):
+  	return(divides(2,n))
+  
+  def odd(n):
+  	return(not divides(2,n))
+
+
+
+LEC:6- (strings and operations on strings)
+
+  Manipulation of text - 
+    Computation is a lot more than number crunching.
+    - text processing is increasingly important ad document preparation, importing/exporting spreadsheet data, matching search queries etc.
+  
+  Data Type- String (str)
+  
+    It is a sequence of Characters
+    - A single character is a string of length 1
+    - Encloses in quotes - single, double, triple
+    eg-  city = ‘Chennai’
+    title- “hitchhiker’s guide’
+  
+  
+  String as Sequence of characters- 
+  
+    It is positioned as 0,1,2,….,n-1
+    
+    eg- s = “hello”
+    position- h=0=-1, e=1=-2, l=3=-3, l=4=-4, o=5-5
+    
+    positions -1, -2 … count backwards from end.
+    
+  
+  Operation on Strings - 
+  
+    Combining two strings - called concatenation - operator “+”
+    
+    eg- 
+    s = "hello”
+    t = s+ “, there”
+    print(t)
+    -  “hello, there”
+    
+    
+    - we can get length of string using function - len(s)- this will return length of s
+    
+  
+  A slice is a “segment” of a string.
+  
+    - s = hello
+    - s[1:4] is “ell”
+    
+    Range function in Python is always counted as 
+    (1, m+1) is we want the list up till  ‘m’
+    
+    
+    s[:j] starts as s[0], so s[0:,j]
+    
+    s[i:] ends at s[len(s)-1] so s[i:len(s)]
+  
+  Modifying strings - 
+  
+    Cannot update a string ‘in place’ 
+    - s = “hello”, we want to change to “help!”
+    - if stated - s[3] ‎ =  p - error!
+    - Instead we use slices and concatenation
+    - s =s[0:3] + “p!”
+  - Strings a immutable values - Cannot be changed, without creating a fresh value.
+
+
+
+
+LEC:7 - (lists and operations on lists)
+
+ Lists - 
+  
+    It is a sequence of characters
+    factors = [1,2,5,10]
+    names = [“Anand”, “Charles”, “Mohit”] 
+    
+    Type need not to be uniform - 
+    mixed = [3, True, “Yellow”] 
+    
+    we can extract values as - 
+    factors[3] is 10, mixed[0:2] is [3, True]
+  
+  Difference between Lists and Strings -
+  
+    For str, both a single position and a slice return strings -
+    h = "hello” 
+    h[0] ‎ = = h[0:1] == “h”
+    
+    
+    For lists, a single position returns a value, a slice returns a list.
+    
+    Fac  =  [1,2,5,10]
+    Fac[0] is  1, factors[0:1] is  [1]
+  
+  
+  Nested Lists -
+  
+    nested = [[2,[37]], 4, [“hello”]]
+    
+    nested[0]  is [2,[37]]
+    
+    nested[1] is 4
+    
+    nested[2][0][3] is “l”
+    nested[0][1:2] is [[37]]
+  
+  Updating Lists - 
+  
+    unlike strings, lists can be updated in place 
+    
+    nested = [[2,[37]], 4, [“hello”]]
+    nested [1] = 7
+    nested is now [2, [37]], 7, [“hello”]]
+    
+    nested[0][1][0]  equal to 19
+    nested is now [[2,[19]], 7, “hello”]]
+  
+  - lists are mutable
+  
+  
+  mutable vs immutable - 
+  
+    x=5
+    y=x
+    
+    now we change x=7 
+    
+    has the value of y changed? - nope
+    
+    no changes were made on y being 5
+    
+    for immutable values, we can assume that assignment makes a fresh copy of a value
+    - values of type int, float, bool, str are immutable
+    
+    for mutable values, assignment does not make a fresh copy
+  
+  eg- 
+    
+    list1= [1,3,5,7]
+    list2 = list1
+    
+    now we change list1[2] = 4
+    
+    what is list[2][2] now? - it is also 4
+    
+    here list1 and list2 are two names of the same list.
+  
+  Copying Lists - 
+  
+    A slice creates a new (sub) list from an old one.
+    full slice - l[0:len(l)]
+    
+    to make a copy of a list we use a full slice - 
+    
+    list2 = list1[:]
+    
+    here any updates made on list 1 will not affect list 2
+    
+    eg -
+    list1 = [1,3,5,7]
+    list2 = [list1[:]
+    list1[2]= 4
+    - list1 = [1,3,4,7]
+    - list2 = [1,3,5,7]
+
+  Concatenation - adding lists -
+  
+    List1 = [1,3,5,7]
+    List2 = [4,5,6,8]
+    List3 =  List1 + List 2
+    
+    List 3 is now [1,3,5,7,4,5,6,8]
+    
+    “+” always produces a new list
+
+LEC:9- (introducing control flow)
+
+  def f(a,b,c):
+  	statemet1
+  	statement2
+  	return(v)
+  
+  function name - f , takes values as 3 arguments 
+  body is indented
+  return() statement exists and returns a value
+  argument value is substituted for a name   
+  
+  updating list-
+  
+    def update(l,i,v):
+    	if i>=0 and i <len(l):
+    		l[i] = v
+    		return(True)
+    	else:
+    	v = v+1
+    	return(False)
+  
+  
+  list given. - ns = [3,11,12]
+  z = 8 
+  update(ns,2,z) - update list ns at position 2 at given z    
+  
+  
+  a function can call itself - recursion 
+  
+  n! in code-
+  
+    def factorial(n):
+    	if n <= 0:
+    		return(1)
+    	else:
+    		val = n*factorial(n-1)
+    		return(val)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
