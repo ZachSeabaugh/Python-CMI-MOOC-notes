@@ -1,0 +1,24 @@
+LEC:1 (Just explain use cases of algorithms and explains gcd of two numbers on paper then on code)
+
+Algorithms that manipulate information-
+
+    1. compute numerical functions
+    2. reorganize data - arrange in order
+    3. optimization - find shortest route
+    4. solve games problems
+    5. autocorrection
+
+Algorithm to compute gcd(m,n)
+
+    1. use fm, fn for list of factors of m , n respectively
+    2. for each i from 1 to m, add i to fm if i divides m
+    3. for each j from 1 to n, add j to fn if j divides n
+    4. use ‘cf’ for list of common factors
+    5. for each f in fm, add f to cf if f also appears in fn
+    6. return largest value in cf
+
+- some points to note -  
+a. we use names to remember intermediate values - m, n, fm, cf, i, j, f 
+b. Values can be single items or collections -m, n, i, j, f are single numbers - fm, fn, cf are lists 
+c. Assign values to names - - fn = [] - explicitly, for f in cf - implicitly d. 
+Update them -  - fn.append(i)
