@@ -94,7 +94,7 @@ LEC:6- (strings and operations on strings)
 
 
 
-LEC:7 - (lists and operations on lists)
+LEC:7 - (lists and operations on lists) - {pic attach +2}
 
  Lists - 
   
@@ -201,6 +201,74 @@ LEC:7 - (lists and operations on lists)
     
     “+” always produces a new list
 
+LEC:8 - Control Flow - {pic attach +1}
+
+- Interpreter executed statements from top to bottom
+- Function definitions are digested for future use
+- Computations starts from statements and definitions are remembered
+
+conditional execution - 
+if m%n != 0:
+	(m, n) ‎ =  (n,m%n)
+else:
+	gcd =n
+second statement is executed if and only if m%n is true
+Indentation demarcates body of ‘if’ - must be uniform- 
+
+eg- 
+if condition:
+	statement1 - execute conditionally
+	statement2 - execute  conditionally
+statement3 		-execute unconditionally
+
+
+Shortcuts for conditions -
+- numeric value 0 is treated as False
+- Empty sequence “”, [] is treated as False
+- Everything else is True
+eg - 
+
+if m%n:
+	(m, n) ‎ =  (n, m%n)
+else:
+	gcd = n
+
+
+elif - Multiway branching- 
+  Control Flow -
+  
+    - Interpreter executed statements from top to bottom
+    - Function definitions are digested for future use
+    - Computations starts from statements and definitions are remembered
+  
+  conditional execution - 
+    if m%n != 0:
+    	(m, n) ‎ =  (n,m%n)
+    else:
+    	gcd =n
+    second statement is executed if and only if m%n is true
+    Indentation demarcates body of ‘if’ - must be uniform- 
+  
+    eg- 
+      if condition:
+      	statement1 - execute conditionally
+      	statement2 - execute  conditionally
+      statement3 		-execute unconditionally
+  
+  
+  Shortcuts for conditions -
+    - numeric value 0 is treated as False
+    - Empty sequence “”, [] is treated as False
+    - Everything else is True
+    eg - 
+      
+      if m%n:
+      	(m, n) ‎ =  (n, m%n)
+      else:
+      	gcd = n
+  
+  
+  elif - Multiway branching- 
 LEC:9- (introducing control flow)
 
   def f(a,b,c):
@@ -239,6 +307,10 @@ LEC:9- (introducing control flow)
     	else:
     		val = n*factorial(n-1)
     		return(val)
+
+
+LEC:10
+  
 
 
 
